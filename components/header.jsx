@@ -4,6 +4,7 @@ import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { MobileMenu } from '@/components/mobile-menu'
 
 export function Header() {
   const { theme, setTheme } = useTheme()
@@ -16,8 +17,9 @@ export function Header() {
   if (!mounted) return null
 
   return (
-    <header className="border-b border-border bg-card px-6 py-0">
+    <header className="border-b border-border bg-card px-4 sm:px-6 py-3 relative">
       <div className="flex items-center justify-between">
+        <MobileMenu />
         <div>
           <h2 className="text-lg font-semibold hidden">Server Management Dashboard</h2>
         </div>

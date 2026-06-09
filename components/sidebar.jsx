@@ -31,7 +31,7 @@ export function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="w-64 border-r border-border bg-card flex flex-col max-h-screen">
+    <aside className="w-64 border-r border-border bg-card flex flex-col h-full">
       <div className="p-4 sm:p-6 border-b border-border">
         <h1 className="text-lg font-bold text-foreground">ServerMgmt</h1>
       </div>
