@@ -31,12 +31,12 @@ export function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="w-64 border-r border-border bg-card flex flex-col max-h-screen">
-      <div className="p-4 sm:p-6 border-b border-border">
+    <aside className="w-64 border-r border-border bg-card flex flex-col">
+      <div className="p-6 border-b border-border">
         <h1 className="text-lg font-bold text-foreground">ServerMgmt</h1>
       </div>
 
-      <nav className="flex-1 px-2 sm:px-4 space-y-1 py-2 sm:py-4 overflow-y-auto">
+      <nav className="flex-1 px-4 space-y-1 py-4">
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = pathname === item.href

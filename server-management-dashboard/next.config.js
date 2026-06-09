@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
@@ -8,7 +7,7 @@ const nextConfig = {
   optimizeFonts: true,
   swcMinify: true,
   images: {
-    unoptimized: true,
+    formats: ['image/avif', 'image/webp'],
   },
   headers: async () => {
     return [

@@ -7,7 +7,6 @@ import { ThemeInitializer } from '@/components/theme-initializer'
 export const metadata = {
   title: 'Server Management',
   description: 'Internal server management dashboard',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
 }
 
 export default function RootLayout({ children }) {
@@ -16,14 +15,12 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeInitializer />
         <Providers>
-          <div className="flex h-screen flex-col lg:flex-row">
-            <div className="hidden lg:block">
-              <Sidebar />
-            </div>
+          <div className="flex h-screen">
+            <Sidebar />
             <div className="flex-1 flex flex-col overflow-hidden">
               <Header />
               <main className="flex-1 overflow-auto bg-background">
-                <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-12 py-4 sm:py-6 lg:py-7">
+                <div className="w-full max-w-8xl mx-auto px-12 py-7">
                   {children}
                 </div>
               </main>
